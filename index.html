@@ -1,145 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evin K Limited | Renewable Energy Development</title>
 
   <style>
+    :root {
+      --dark: #0b1110;
+      --charcoal: #1b2421;
+      --green: #1f5f46;
+      --soft-green: #e8f1ec;
+      --light: #f7f8f7;
+      --text: #202020;
+      --muted: #666;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #111111;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
       line-height: 1.6;
     }
 
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e5e5e5;
+      z-index: 1000;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--dark);
+    }
+
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+    }
+
     header {
-      background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1600&auto=format&fit=crop');
+      min-height: 92vh;
+      background:
+        linear-gradient(rgba(5, 15, 12, 0.68), rgba(5, 15, 12, 0.72)),
+        url("https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1800&auto=format&fit=crop");
       background-size: cover;
       background-position: center;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      padding: 120px 8% 80px;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      color: #cfe7da;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      margin: 0 0 24px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 720px;
+      color: #eef4f1;
+      margin-bottom: 34px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      background: var(--green);
       color: white;
-      text-align: center;
-      padding: 120px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-right: 12px;
     }
 
-    header h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-    }
-
-    header h2 {
-      font-size: 26px;
-      font-weight: normal;
-      margin-top: 0;
+    .button.secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.7);
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 90px 8%;
+    }
+
+    .section-inner {
+      max-width: 1150px;
       margin: auto;
     }
 
-    h3 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      margin: 0 0 22px;
+      color: var(--dark);
+    }
+
+    .lead {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 850px;
+      margin-bottom: 40px;
+    }
+
+    .light {
+      background: var(--light);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 35px;
     }
 
     .card {
-      background: #f4f4f4;
-      padding: 25px;
-      border-radius: 10px;
+      background: var(--white);
+      padding: 30px;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      min-height: 190px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--green);
+      font-size: 20px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .panel {
+      background: var(--soft-green);
+      padding: 36px;
+      border-radius: 8px;
+      border-left: 5px solid var(--green);
+    }
+
+    .panel strong {
+      color: var(--dark);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .statement {
+      background: var(--dark);
+      color: white;
+      padding: 90px 8%;
+    }
+
+    .statement h2 {
+      color: white;
+    }
+
+    .statement p {
+      color: #d7e2dd;
+      max-width: 850px;
+      font-size: 18px;
     }
 
     footer {
-      background: #111111;
+      background: #050807;
       color: white;
-      text-align: center;
-      padding: 40px 20px;
+      padding: 60px 8%;
     }
 
-    a {
-      color: #2d6a4f;
+    footer a {
+      color: #cfe7da;
       text-decoration: none;
+    }
+
+    .footer-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .small {
+      color: #aaa;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        padding: 14px 6%;
+        display: block;
+      }
+
+      nav .links {
+        margin-top: 8px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 12px;
+        font-size: 13px;
+      }
+
+      header {
+        padding: 130px 6% 70px;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+
+      .split,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>EVIN K LIMITED</h1>
-  <h2>Renewable Energy Development</h2>
-</header>
+  <nav>
+    <div class="logo">EVIN K LIMITED</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#development">Development</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<section>
-  <h3>About</h3>
+  <header>
+    <div class="hero">
+      <div class="eyebrow">Renewable Energy Development</div>
+      <h1>Strategic Renewable Energy Development for a Low-Carbon Future</h1>
+      <p>
+        Evin K Limited is focused on early-stage renewable-energy assessment,
+        infrastructure evaluation and disciplined project development within
+        the evolving UK energy transition.
+      </p>
+      <a href="#development" class="button">Our Focus</a>
+      <a href="#contact" class="button secondary">Contact</a>
+    </div>
+  </header>
 
-  <p>
-    Evin K Limited is a UK-based company focused on renewable-energy development,
-    infrastructure assessment, and early-stage strategic project progression
-    within the evolving low-carbon energy sector.
-  </p>
+  <section id="about">
+    <div class="section-inner split">
+      <div>
+        <div class="eyebrow" style="color: var(--green);">About</div>
+        <h2>Evin K Limited</h2>
+        <p class="lead">
+          Evin K Limited is a UK-based company incorporated in 2016 and focused
+          on renewable-energy development, infrastructure assessment and
+          early-stage strategic project progression.
+        </p>
+        <p>
+          The company’s current renewable-energy positioning is centred on
+          feasibility-stage assessment, structured development planning,
+          professional advisory engagement and long-term infrastructure
+          opportunity evaluation.
+        </p>
+      </div>
 
-  <p>
-    The company is currently progressing feasibility-stage renewable-energy
-    assessment activities with an emphasis on disciplined development,
-    structured infrastructure evaluation, and long-term strategic positioning.
-  </p>
-</section>
+      <div class="panel">
+        <p><strong>Company Positioning</strong></p>
+        <p>
+          Evin K Limited approaches renewable-energy development through
+          measured assessment, controlled disclosure, professional engagement
+          and disciplined project progression.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h3>Renewable Development</h3>
+  <section id="development" class="light">
+    <div class="section-inner">
+      <div class="eyebrow" style="color: var(--green);">Development Focus</div>
+      <h2>Renewable Energy Development</h2>
+      <p class="lead">
+        Evin K Limited is focused on strategic renewable-energy opportunities
+        that require professional feasibility assessment, infrastructure
+        evaluation and structured development-stage preparation.
+      </p>
 
-  <div class="grid">
+      <div class="grid">
+        <div class="card">
+          <h3>Feasibility Assessment</h3>
+          <p>
+            Early-stage assessment of renewable-energy opportunities,
+            commercial viability and development potential.
+          </p>
+        </div>
 
-    <div class="card">
-      <h4>Feasibility Assessment</h4>
-      <p>Strategic renewable-energy opportunity evaluation and development-stage assessment.</p>
+        <div class="card">
+          <h3>Grid Strategy</h3>
+          <p>
+            Consideration of infrastructure requirements, connection strategy
+            and electricity network engagement pathways.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Environmental Screening</h3>
+          <p>
+            Desktop-level review of environmental, planning and development
+            constraints prior to formal progression.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Project Structuring</h3>
+          <p>
+            Development-stage organisation, advisory engagement and structured
+            progression toward future project readiness.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="section-inner split">
+      <div>
+        <div class="eyebrow" style="color: var(--green);">Approach</div>
+        <h2>Disciplined, Phased and Professionally Managed</h2>
+        <p class="lead">
+          The company recognises that renewable-energy infrastructure requires
+          careful assessment, technical validation, risk awareness and
+          structured engagement before formal development progression.
+        </p>
+
+        <ul>
+          <li>Strategic feasibility assessment</li>
+          <li>Controlled disclosure and professional documentation</li>
+          <li>Grid and infrastructure evaluation</li>
+          <li>Environmental and planning pathway review</li>
+          <li>Consultant and advisory engagement</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <p><strong>Current Stage</strong></p>
+        <p>
+          Evin K Limited is presently focused on feasibility-stage renewable
+          development activities and early professional positioning. The company
+          does not publicly disclose commercially sensitive site-level details
+          at this stage.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement">
+    <div class="section-inner">
+      <div class="eyebrow">Governance & Confidentiality</div>
+      <h2>Controlled Development Progression</h2>
+      <p>
+        Evin K Limited adopts a measured approach to renewable-energy
+        development. Certain technical, commercial and locational details are
+        intentionally handled through controlled professional engagement and
+        appropriate confidentiality arrangements.
+      </p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-grid">
+      <div>
+        <h2 style="color:white;">Contact</h2>
+        <p>
+          For professional enquiries, feasibility-stage discussions or
+          renewable-energy development communications, please contact:
+        </p>
+      </div>
+
+      <div>
+        <p><strong>Kelechi Nwokocha</strong></p>
+        <p>Evin K Limited</p>
+        <p>United Kingdom</p>
+        <p><a href="mailto:Kelechi.nwokocha@evinklimited.co.uk">Kelechi.nwokocha@evinklimited.co.uk</a></p>
+        <p><a href="mailto:Info@evinklimited.co.uk">Info@evinklimited.co.uk</a></p>
+      </div>
     </div>
 
-    <div class="card">
-      <h4>Grid Strategy</h4>
-      <p>Infrastructure and connection assessment aligned with evolving UK energy transition frameworks.</p>
+    <div class="section-inner small">
+      © 2026 Evin K Limited. Renewable Energy Development.
     </div>
-
-    <div class="card">
-      <h4>Environmental Screening</h4>
-      <p>Early-stage desktop environmental and planning pathway considerations.</p>
-    </div>
-
-    <div class="card">
-      <h4>Project Structuring</h4>
-      <p>Professionally managed and phased renewable-energy development progression.</p>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h3>Strategic Positioning</h3>
-
-  <p>
-    Evin K Limited is committed to disciplined, professionally managed and
-    strategically structured renewable-energy development progression within
-    the United Kingdom.
-  </p>
-</section>
-
-<footer>
-  <h3>Contact</h3>
-
-  <p>Kelechi.nwokocha@evinklimited.co.uk</p>
-  <p>Info@evinklimited.co.uk</p>
-  <p>United Kingdom</p>
-</footer>
+  </footer>
 
 </body>
 </html>
