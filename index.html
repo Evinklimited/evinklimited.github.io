@@ -147,6 +147,17 @@ h2{
   display:block;
 }
 
+.full-image{
+  padding:0;
+}
+
+.full-image img{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  display:block;
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -254,6 +265,10 @@ footer p{
     grid-template-columns:1fr;
   }
 
+  .full-image img{
+    height:300px;
+  }
+
   h1{
     font-size:38px;
   }
@@ -325,7 +340,7 @@ footer p{
     </div>
 
     <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format&fit=crop" alt="Electricity transmission infrastructure">
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop" alt="Electricity grid infrastructure">
     </div>
   </div>
 </section>
@@ -376,6 +391,10 @@ footer p{
       </div>
     </div>
   </div>
+</section>
+
+<section class="full-image">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800&auto=format&fit=crop" alt="Energy infrastructure landscape">
 </section>
 
 <section id="approach">
