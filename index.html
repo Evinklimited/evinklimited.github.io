@@ -59,8 +59,9 @@ nav a{
 header{
   min-height:82vh;
   background:
-  linear-gradient(rgba(0,0,0,0.36), rgba(0,0,0,0.48)),
-  url("images/evin-k-hero.png");
+  linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.55)),
+  url("images/evin-k-hero.png"),
+  url("https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1800&auto=format&fit=crop");
   background-size:cover;
   background-position:center;
   display:flex;
@@ -134,33 +135,6 @@ h2{
   margin-bottom:30px;
 }
 
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:42px;
-  align-items:center;
-}
-
-.image-block img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
-}
-
-.section-image{
-  margin-top:42px;
-}
-
-.section-image img{
-  width:100%;
-  height:390px;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
-}
-
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -178,6 +152,18 @@ h2{
 .card h3{
   margin-top:0;
   color:var(--green);
+}
+
+.section-end-image{
+  margin-top:42px;
+}
+
+.section-end-image img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
 }
 
 .light{
@@ -272,13 +258,7 @@ footer p{
     padding:56px 6%;
   }
 
-  .split,
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .image-block img,
-  .section-image img{
+  .section-end-image img{
     height:245px;
   }
 
@@ -310,6 +290,7 @@ footer p{
   <div class="links">
     <a href="#about">About</a>
     <a href="#development">Development</a>
+    <a href="#infrastructure">Infrastructure</a>
     <a href="#approach">Approach</a>
     <a href="#contact">Contact</a>
   </div>
@@ -333,27 +314,25 @@ footer p{
 </header>
 
 <section id="about">
-  <div class="section-inner split">
-    <div>
-      <div class="eyebrow" style="color:var(--green);">About</div>
+  <div class="section-inner">
+    <div class="eyebrow" style="color:var(--green);">About</div>
 
-      <h2>Evin K Limited</h2>
+    <h2>Evin K Limited</h2>
 
-      <p class="lead">
-        Evin K Limited is a UK-based company incorporated in England and Wales in 2016,
-        focused on renewable-energy development, infrastructure assessment
-        and structured project progression.
-      </p>
+    <p class="lead">
+      Evin K Limited is a UK-based company incorporated in England and Wales in 2016,
+      focused on renewable-energy development, infrastructure assessment
+      and structured project progression.
+    </p>
 
-      <p>
-        The company’s positioning is centred on feasibility-stage assessment,
-        infrastructure evaluation, strategic development planning and
-        professional engagement relating to long-term renewable-energy opportunities.
-      </p>
-    </div>
+    <p>
+      The company’s positioning is centred on feasibility-stage assessment,
+      infrastructure evaluation, strategic development planning and
+      professional engagement relating to long-term renewable-energy opportunities.
+    </p>
 
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop" alt="Electricity pylons and transmission infrastructure">
+    <div class="section-end-image">
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1400&auto=format&fit=crop" alt="Electricity pylons and transmission infrastructure">
     </div>
   </div>
 </section>
@@ -404,61 +383,57 @@ footer p{
       </div>
     </div>
 
-    <div class="section-image">
+    <div class="section-end-image">
       <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1400&auto=format&fit=crop" alt="Solar panel renewable energy infrastructure">
     </div>
   </div>
 </section>
 
-<section>
-  <div class="section-inner split">
-    <div>
-      <div class="eyebrow" style="color:var(--green);">Infrastructure</div>
+<section id="infrastructure">
+  <div class="section-inner">
+    <div class="eyebrow" style="color:var(--green);">Infrastructure</div>
 
-      <h2>Grid & Energy Infrastructure</h2>
+    <h2>Grid & Energy Infrastructure</h2>
 
-      <p class="lead">
-        Electricity infrastructure remains central to renewable-energy deployment,
-        long-term grid resilience and strategic energy-system integration.
-      </p>
+    <p class="lead">
+      Electricity infrastructure remains central to renewable-energy deployment,
+      long-term grid resilience and strategic energy-system integration.
+    </p>
 
-      <p>
-        Evin K Limited maintains interest in infrastructure evaluation,
-        transmission considerations and broader energy-system development
-        associated with renewable-energy progression.
-      </p>
-    </div>
+    <p>
+      Evin K Limited maintains interest in infrastructure evaluation,
+      transmission considerations and broader energy-system development
+      associated with renewable-energy progression.
+    </p>
 
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop" alt="Electrical substation and grid infrastructure">
+    <div class="section-end-image">
+      <img src="images/substation.jpg" alt="Electrical substation and grid infrastructure">
     </div>
   </div>
 </section>
 
 <section id="approach" class="light">
-  <div class="section-inner split">
-    <div>
-      <div class="eyebrow" style="color:var(--green);">Approach</div>
+  <div class="section-inner">
+    <div class="eyebrow" style="color:var(--green);">Approach</div>
 
-      <h2>Disciplined & Professionally Managed</h2>
+    <h2>Disciplined & Professionally Managed</h2>
 
-      <p class="lead">
-        Renewable-energy infrastructure requires careful assessment,
-        technical validation, environmental awareness and structured engagement
-        before formal development progression.
-      </p>
+    <p class="lead">
+      Renewable-energy infrastructure requires careful assessment,
+      technical validation, environmental awareness and structured engagement
+      before formal development progression.
+    </p>
 
-      <ul>
-        <li>Strategic feasibility assessment</li>
-        <li>Infrastructure and grid evaluation</li>
-        <li>Environmental pathway review</li>
-        <li>Professional advisory engagement</li>
-        <li>Structured development progression</li>
-      </ul>
-    </div>
+    <ul>
+      <li>Strategic feasibility assessment</li>
+      <li>Infrastructure and grid evaluation</li>
+      <li>Environmental pathway review</li>
+      <li>Professional advisory engagement</li>
+      <li>Structured development progression</li>
+    </ul>
 
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" alt="Wind turbine farm infrastructure">
+    <div class="section-end-image">
+      <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1400&auto=format&fit=crop" alt="Wind turbine farm infrastructure">
     </div>
   </div>
 </section>
