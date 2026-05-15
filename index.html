@@ -59,8 +59,8 @@ nav a{
 header{
   min-height:82vh;
   background:
-  linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
-  url("https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1800&auto=format&fit=crop");
+  linear-gradient(rgba(0,0,0,0.36), rgba(0,0,0,0.48)),
+  url("images/evin-k-hero.png");
   background-size:cover;
   background-position:center;
   display:flex;
@@ -144,6 +144,18 @@ h2{
 .image-block img{
   width:100%;
   height:350px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+}
+
+.section-image{
+  margin-top:42px;
+}
+
+.section-image img{
+  width:100%;
+  height:390px;
   object-fit:cover;
   border-radius:10px;
   display:block;
@@ -253,6 +265,7 @@ footer p{
   header{
     min-height:74vh;
     padding:84px 6% 58px;
+    background-position:center;
   }
 
   section{
@@ -264,7 +277,8 @@ footer p{
     grid-template-columns:1fr;
   }
 
-  .image-block img{
+  .image-block img,
+  .section-image img{
     height:245px;
   }
 
@@ -389,15 +403,15 @@ footer p{
         </p>
       </div>
     </div>
+
+    <div class="section-image">
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1400&auto=format&fit=crop" alt="Solar panel renewable energy infrastructure">
+    </div>
   </div>
 </section>
 
 <section>
   <div class="section-inner split">
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop" alt="Grid transmission infrastructure">
-    </div>
-
     <div>
       <div class="eyebrow" style="color:var(--green);">Infrastructure</div>
 
@@ -413,6 +427,10 @@ footer p{
         transmission considerations and broader energy-system development
         associated with renewable-energy progression.
       </p>
+    </div>
+
+    <div class="image-block">
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop" alt="Electrical substation and grid infrastructure">
     </div>
   </div>
 </section>
@@ -437,31 +455,6 @@ footer p{
         <li>Professional advisory engagement</li>
         <li>Structured development progression</li>
       </ul>
-    </div>
-
-    <div class="image-block">
-      <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1200&auto=format&fit=crop" alt="Electrical infrastructure and energy systems">
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="section-inner split">
-    <div>
-      <div class="eyebrow" style="color:var(--green);">Wind Energy</div>
-
-      <h2>Wind-Focused Renewable Infrastructure</h2>
-
-      <p class="lead">
-        Wind energy remains a central area of interest for long-term renewable
-        infrastructure development, particularly where strong resource potential,
-        grid access and structured project planning align.
-      </p>
-
-      <p>
-        Evin K Limited remains focused on disciplined renewable-energy assessment
-        aligned with evolving UK energy infrastructure and transition objectives.
-      </p>
     </div>
 
     <div class="image-block">
@@ -497,8 +490,11 @@ footer p{
 
     <div>
       <h3>Evin K Limited</h3>
+
       <p>Renewable Energy Development</p>
+
       <p>United Kingdom</p>
+
       <p>
         <a href="mailto:info@evinklimited.co.uk">
           info@evinklimited.co.uk
@@ -508,8 +504,11 @@ footer p{
 
     <div>
       <h3>Corporate</h3>
+
       <p>Registered in England & Wales</p>
+
       <p>Incorporated in 2016</p>
+
       <p>All rights reserved.</p>
     </div>
   </div>
